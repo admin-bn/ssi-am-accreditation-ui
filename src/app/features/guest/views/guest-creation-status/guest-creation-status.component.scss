@@ -1,0 +1,47 @@
+@import '../../../../../styles/variables';
+
+.status-container {
+  height: 70vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+
+  .status-title {
+    font-size: $font-size-24;
+    font-weight: $font-weight-300;
+    text-align: left;
+  }
+
+  .status-description {
+    margin: 24px 0 52px 0;
+    font-size: $font-size-16;
+  }
+
+  a {
+    color: $color-blue;
+    font-size: $font-size-14;
+    font-weight: $font-weight-600;
+    margin-bottom: 24px;
+  }
+
+  button {
+    height: 42px;
+    width: 200px;
+    border-radius: 6px;
+    background-color: $color-blue;
+    margin: 0 auto 0 auto;
+    font-size: $font-size-14;
+    font-weight: $font-weight-600;
+    text-align: center;
+  }
+}
+
+#add-another-guest {
+  text-transform: uppercase;
+}
+
+#navigate-to-dashboard {
+  text-transform: uppercase;
+}

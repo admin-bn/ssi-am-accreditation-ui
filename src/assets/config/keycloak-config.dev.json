@@ -1,0 +1,6 @@
+{
+  "KEYCLOAK_URL": "http://localhost:8100/auth",
+  "KEYCLOAK_REALM": "ssi-am-accreditation",
+  "KEYCLOAK_CLIENT_ID": "accreditation-ui",
+  "ACCREDITATION_CONTROLLER_BASE_URL": "http://localhost:8082/api/v2"
+}

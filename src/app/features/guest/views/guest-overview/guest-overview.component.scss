@@ -1,0 +1,43 @@
+@import '../../../../../styles/variables';
+
+.row {
+  display: flex;
+  width: 80vw;
+  justify-content: space-between;
+}
+
+a#addGuest {
+  background-color: $color-blue;
+}
+
+table {
+  width: 90%;
+  margin-top: 30px;
+  font-weight: $font-weight-100;
+
+  td {
+    background-color: $color-grey-2-opacity-30;
+    color: $color-dark;
+    font-size: $font-size-16;
+    border-bottom-color: $color-grey-2;
+  }
+
+  th {
+    color: $color-grey-3;
+    border-bottom-color: $color-grey-2;
+    font-size: $font-size-16;
+    font-weight: $font-weight-100;
+  }
+
+  #download-email-button {
+    cursor: pointer;
+  }
+
+  mat-icon {
+    color: $color-grey-2;
+  }
+
+  mat-cell {
+    background-color: $color-grey-4;
+  }
+}

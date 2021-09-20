@@ -1,0 +1,146 @@
+<form [formGroup]="guestForm">
+  <div class="details-row">
+    <div class="title">
+      <div class="details-title">Gästeinformationen</div>
+    </div>
+    <div class="form">
+      <div class="form-row">
+        <mat-form-field appearance="fill" floatLabel="always" class="form-row-item">
+          <mat-label>Vorname</mat-label>
+          <input matInput formControlName="firstName" id="firstName" type="text" maxlength="50" required />
+          <mat-error *ngIf="guestForm.controls.firstName.hasError('maxLength')">
+            Vorname ist auf 50 Zeichen begrenzt
+          </mat-error>
+          <mat-error *ngIf="guestForm.controls.firstName.hasError('required')">
+            Vorname ist <strong>erforderlich</strong>
+          </mat-error>
+          <mat-error *ngIf="guestForm.controls.firstName.hasError('fieldContainsForbiddenCharacters')">
+            Vorname kann nur alphanumerische Zeichen sowie die folgenden Sonderzeichen enthalten: _ , . - &
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" floatLabel="always" class="form-row-item">
+          <mat-label>Nachname</mat-label>
+          <input matInput formControlName="lastName" id="lastName" type="text" maxlength="50" required />
+          <mat-error *ngIf="guestForm.controls.lastName.hasError('maxLength')">
+            Nachname ist auf 50 Zeichen begrenzt
+          </mat-error>
+          <mat-error *ngIf="guestForm.controls.lastName.hasError('required')">
+            Nachname ist <strong>erforderlich</strong>
+          </mat-error>
+          <mat-error *ngIf="guestForm.controls.lastName.hasError('fieldContainsForbiddenCharacters')">
+            Nachname kann nur alphanumerische Zeichen sowie die folgenden Sonderzeichen enthalten: _ , . - &
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill" floatLabel="always" class="form-row-item">
+          <mat-label>Firma</mat-label>
+          <input matInput formControlName="companyName" id="companyName" type="text" maxlength="100" required />
+          <mat-error *ngIf="guestForm.controls.companyName.hasError('maxLength')">
+            Firma ist auf 100 Zeichen begrenzt
+          </mat-error>
+          <mat-error *ngIf="guestForm.controls.companyName.hasError('required')">
+            Firma ist <strong>erforderlich</strong>
+          </mat-error>
+          <mat-error *ngIf="guestForm.controls.companyName.hasError('fieldContainsForbiddenCharacters')">
+            Firma kann nur alphanumerische Zeichen sowie die folgenden Sonderzeichen enthalten: _ , . - &
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" floatLabel="always" class="form-row-item">
+          <mat-label>Titel</mat-label>
+          <input matInput formControlName="title" id="title" type="text" maxlength="50" />
+          <mat-error *ngIf="guestForm.controls.title.hasError('maxLength')">
+            Titel ist auf 50 Zeichen begrenzt
+          </mat-error>
+          <mat-error *ngIf="guestForm.controls.title.hasError('fieldContainsForbiddenCharacters')">
+            Titel kann nur alphanumerische Zeichen sowie die folgenden Sonderzeichen enthalten: _ , . - &
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill" floatLabel="always" class="form-row-item">
+          <mat-label>E-Mail-Adresse</mat-label>
+          <input matInput formControlName="email" id="email" type="text" required />
+          <mat-error *ngIf="!guestForm.controls.email.hasError('email')">
+            Bitte geben Sie eine gültige E-Mail Adresse an
+          </mat-error>
+          <mat-error *ngIf="guestForm.controls.email.hasError('required')">
+            Email ist <strong>erforderlich</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="details-row">
+    <div class="title">
+      <div class="details-title">Besuchsinformationen</div>
+    </div>
+    <div class="form">
+      <div class="form-row">
+        <mat-form-field appearance="fill" floatLabel="always" class="form-row-item">
+          <mat-label>Besuchsgrund</mat-label>
+          <input matInput formControlName="typeOfVisit" id="typeOfVisit" type="text" maxlength="50" required />
+          <mat-error *ngIf="guestForm.controls.typeOfVisit.hasError('maxLength')">
+            Besuchsgrund ist auf 50 Zeichen begrenzt
+          </mat-error>
+          <mat-error *ngIf="guestForm.controls.typeOfVisit.hasError('required')">
+            Besuchsgrund ist <strong>erforderlich</strong>
+          </mat-error>
+          <mat-error *ngIf="guestForm.controls.typeOfVisit.hasError('fieldContainsForbiddenCharacters')">
+            Besuchsgrund kann nur alphanumerische Zeichen sowie die folgenden Sonderzeichen enthalten: _ , . - &
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" floatLabel="always" class="form-row-item">
+          <mat-label>Ort / Gebäude</mat-label>
+          <input matInput formControlName="location" id="location" type="text" maxlength="50" required />
+          <mat-error *ngIf="guestForm.controls.location.hasError('maxLength')">
+            Ort / Gebäude ist auf 50 Zeichen begrenzt
+          </mat-error>
+          <mat-error *ngIf="guestForm.controls.location.hasError('required')">
+            Ort / Gebäude ist <strong>erforderlich</strong>
+          </mat-error>
+          <mat-error *ngIf="guestForm.controls.location.hasError('fieldContainsForbiddenCharacters')">
+            Ort / Gebäude kann nur alphanumerische Zeichen sowie die folgenden Sonderzeichen enthalten: _ , . - &
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill" floatLabel="always" class="form-row-item">
+          <mat-label>Ankunftsdatum</mat-label>
+          <input matInput formControlName="validFromDate" id="validFromDate" type="date" required />
+          <mat-error *ngIf="guestForm.controls.validFromDate.hasError('required')">
+            Ankunftsdatum ist <strong>erforderlich</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" floatLabel="always" class="form-row-item">
+          <mat-label>Ankunftszeit</mat-label>
+          <input matInput formControlName="validFromTime" id="validFromTime" type="time" required />
+          <mat-error *ngIf="guestForm.controls.validFromTime.hasError('required')">
+            Ankunftszeit ist <strong>erforderlich</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill" floatLabel="always" class="form-row-item">
+          <mat-label>Abreisedatum</mat-label>
+          <input matInput formControlName="validUntilDate" id="validUntilDate" type="date" required />
+          <mat-error *ngIf="guestForm.controls.validUntilDate.hasError('required')">
+            Abreisedatum ist <strong>erforderlich</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" floatLabel="always" class="form-row-item">
+          <mat-label>Abreisezeit</mat-label>
+          <input matInput formControlName="validUntilTime" id="validUntilTime" type="time" required />
+          <mat-error *ngIf="guestForm.controls.validUntilTime.hasError('required')">
+            Abreisedatum ist <strong>erforderlich</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="button-container">
+    <button id="submit-button" [disabled]="guestForm.invalid" (click)="submit()">SENDEN</button>
+  </div>
+</form>

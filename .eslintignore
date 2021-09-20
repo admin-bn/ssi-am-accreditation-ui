@@ -1,0 +1,8 @@
+package.json
+package-lock.json
+dist
+karma.conf.js
+
+*spec.*
+src/polyfills.ts
+src/test.ts

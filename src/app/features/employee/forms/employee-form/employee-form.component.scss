@@ -1,0 +1,88 @@
+@import '../../../../../styles/variables';
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  align-content: flex-start;
+}
+
+.column-right {
+  align-items: space-between;
+  width: 66.67%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.row.mat-form-field:nth-child(1) {
+  justify-content: flex-start;
+}
+
+.row.mat-form-field:nth-child(2) {
+  justify-content: flex-end;
+}
+
+hr {
+  margin: 2.5rem 0 1.5rem 0;
+  height: 1px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+
+  .mat-form-field {
+    width: 28.125vw;
+    margin-bottom: 0.175rem;
+  }
+
+  .submit-form {
+    float: right;
+    color: $color-white;
+    background-color: $color-blue;
+  }
+
+  .submit-form:disabled {
+    background-color: $color-white;
+    color: $color-grey-4;
+    cursor: not-allowed;
+    border: 0.0625rem solid $color-grey-4;
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  section {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+    align-items: center;
+  }
+
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    .mat-form-field {
+      width: 100%;
+    }
+  }
+}

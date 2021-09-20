@@ -1,0 +1,4 @@
+<h1>Detail</h1>
+<div *ngIf="viewData$ | async as employee">
+  <div>Details of: {{ employee.employeeId }} - {{ employee.lastName }}, {{ employee.firstName }}</div>
+</div>
