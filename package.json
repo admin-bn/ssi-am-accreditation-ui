@@ -2,15 +2,12 @@
   "name": "ssi-am-accreditation-ui",
   "version": "0.0.0",
   "scripts": {
-    "lint": "ng lint",
+    "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production",
-    "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
-    "format": "prettier --write \"**/*.{ts,js,json,html,css,scss,md}\"",
-    "pre-commit": "npm run format && npm run lint && npm run test:headless"
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
