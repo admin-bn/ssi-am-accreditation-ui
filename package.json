@@ -4,7 +4,6 @@
   "scripts": {
     "lint": "ng lint",
     "start": "ng serve",
-    "start:pwa": "npm run build:prod && http-server -a 127.0.0.1 -p 8090 -c-1 dist/ssi-am-accreditation-ui",
     "build": "ng build",
     "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
